@@ -14,19 +14,19 @@ with open(csvpath) as csvfile:
     #set up csv reader with delimiter
     csvreader=csv.reader(csvfile,delimiter=',')
 
+    #set header first
+    csv_header=next(csvreader)
+
     #declare variables
     vote_list=[]
 
-
-    #set header first**If you skip header, total votes is one off :(
-    csv_header=next(csvreader)
-   
+    #begin loop through data
     for row in csvreader:
 
         #find total votes
         vote_list.append(row[0])
         totalvotes=len(vote_list)
-        
+
 
 
 
