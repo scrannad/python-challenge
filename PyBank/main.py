@@ -6,9 +6,6 @@ import csv
 
 csvpath=os.path.join('budget_data.csv')
 
-#print header
-
-
 #read csv file
 with open(csvpath) as csvfile:
     #csvreader specifies delimiter and variable 
@@ -46,7 +43,7 @@ with open(csvpath) as csvfile:
     max_month=profitchange.index(max(profitchange))+1
     min_month=profitchange.index(min(profitchange))+1
    
-#print everything
+#print summary
 print("Financial Analysis")
 print("------------------------------------")
 print(f"Total Months: {str(daterange)}")
@@ -55,7 +52,7 @@ print(f"Average Change: ${average}")
 print(f"Greatest Increase in Profits: {date[max_month]} ${(str(increase))}")
 print(f"Greatest Decrease in Profits: {date[min_month]} ${(str(decrease))}")
         
-#write to txt file
+#write summary to txt file
 txtpath=os.path.join('pybank.txt')
 with open(txtpath,"w") as txtfile:
     txtfile.write("Financial Analysis\n")
