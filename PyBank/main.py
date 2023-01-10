@@ -4,7 +4,10 @@ import os
 #Import module to read csv file
 import csv
 
-csvpath=os.path.join('Resources','budget_data.csv')
+csvpath=os.path.join('resources','budget_data.csv')
+
+#print header
+
 
 #read csv file
 with open(csvpath) as csvfile:
@@ -43,22 +46,22 @@ with open(csvpath) as csvfile:
     max_month=profitchange.index(max(profitchange))+1
     min_month=profitchange.index(min(profitchange))+1
    
-#print summary
+#print everything
 print("Financial Analysis")
 print("------------------------------------")
-print(f"Total Months: {str(daterange)}")
+print(f"Total Months: {daterange}")
 print(f"Total: ${sum(profits)}")
 print(f"Average Change: ${average}")
-print(f"Greatest Increase in Profits: {date[max_month]} (${(str(increase))})")
-print(f"Greatest Decrease in Profits: {date[min_month]} (${(str(decrease))})")
+print(f"Greatest Increase in Profits: {date[max_month]} ${increase}")
+print(f"Greatest Decrease in Profits: {date[min_month]} ${decrease}")
         
-#write summary to txt file
+#write to txt file
 txtpath=os.path.join('pybank.txt')
 with open(txtpath,"w") as txtfile:
     txtfile.write("Financial Analysis\n")
     txtfile.write("------------------------------------\n")
-    txtfile.write(f"Total Months: {str(daterange)}\n")
+    txtfile.write(f"Total Months: {daterange}\n")
     txtfile.write(f"Total: ${sum(profits)}\n")
     txtfile.write(f"Average Change: ${average}\n")
-    txtfile.write(f"Greatest Increase in Profits: {date[max_month]} (${(str(increase))})\n")
-    txtfile.write(f"Greatest Decrease in Profits: {date[min_month]} (${(str(decrease))})\n")
+    txtfile.write(f"Greatest Increase in Profits: {date[max_month]} ${increase}\n")
+    txtfile.write(f"Greatest Decrease in Profits: {date[min_month]} ${decrease}\n")
