@@ -24,13 +24,13 @@ with open(csvpath,'r') as csvfile:
         #gather total votes
         total_votes+=1
 
-        #gather candidates in list
+        #gather candidates and candidate votes in dictionary
         if row[2] not in candidate_votes:
             candidate_votes[row[2]]=1
         else:
             candidate_votes[row[2]]+=1
 
-#print results
+#print total vote results
 print("Election Results")
 print("------------------------")
 print(f"Total Votes: {total_votes}")
@@ -40,7 +40,7 @@ print("------------------------")
 for candidate,votes in candidate_votes.items():
         print(candidate+": "+"{:.3%}".format(votes/total_votes)+"  ("+str(votes)+")")
 
-#find winner by popular vote
+#find winner by popular vote, print
 winner=max(candidate_votes,key=candidate_votes.get)
 print("------------------------")
 print(f"Winner: {winner}")
