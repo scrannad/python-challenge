@@ -4,7 +4,7 @@ import os
 #Import module to read csv file
 import csv
 
-csvpath=os.path.join('..','Resources','budget_data.csv')
+csvpath=os.path.join('Resources','budget_data.csv')
 
 #read csv file
 with open(csvpath) as csvfile:
