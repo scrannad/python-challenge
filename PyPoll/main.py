@@ -2,10 +2,8 @@
 import os
 import csv
 
-csvpath=os.path.join('election_data.csv')
-
-#set dictionary
-poll={}
+#set path
+csvpath=os.path.join('..','Resources','election_data.csv')
 
 #declare variables
 total_votes=0
@@ -41,7 +39,6 @@ print("------------------------")
 #find candidate name, percentage of votes, and vote count in dictionary, print result
 for candidate,votes in candidate_votes.items():
         print(candidate+": "+"{:.3%}".format(votes/total_votes)+"  ("+str(votes)+")")
-        txt_variable=(candidate+": "+"{:.3%}".format(votes/total_votes)+"  ("+str(votes)+")")
 
 #find winner by popular vote
 winner=max(candidate_votes,key=candidate_votes.get)
