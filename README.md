@@ -1,4 +1,4 @@
-This project analyzes and summarizes to large datasets using Python and exporting a summary to a txt file.
+This project analyzes and summarizes to large datasets using Python scripting. A summary of each analysis is printed as well as exported to a txt file.
 
 PyBank creates a Python script to analyze financial records of a company. The csv dataset is composed of two columns: "Date" and "Profits/Losses".
 The Python script analyzes the records to calculate total number of months included, net total of profits and losses over the period, average changes in 
