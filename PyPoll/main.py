@@ -33,7 +33,7 @@ with open(csvpath,'r') as csvfile:
 #print results
 print("Election Results")
 print("------------------------")
-print(f"Total Votes: {str(total_votes)}")
+print(f"Total Votes: {total_votes}")
 print("------------------------")
 
 #find candidate name, percentage of votes, and vote count in dictionary, print result
@@ -52,7 +52,7 @@ txtpath=os.path.join('pypoll.txt')
 txtfile=open(txtpath,'w')
 txtfile.write("Election Results\n")
 txtfile.write("------------------------\n")
-txtfile.write(f"Total Votes: {str(total_votes)}\n")
+txtfile.write(f"Total Votes: {total_votes}\n")
 txtfile.write("------------------------\n")
 
 for candidate,votes in candidate_votes.items():
